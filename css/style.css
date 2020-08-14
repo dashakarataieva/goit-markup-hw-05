@@ -143,8 +143,9 @@ body {
   text-decoration: none;
 
   margin-left: 10px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-mail {
   margin-right: 30px;
@@ -201,7 +202,48 @@ body {
   padding: 10px 32px;
   margin: auto;
 }
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-overlay);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
+  width: 528px;
+  height: 581px;
+
+  background: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  background: var(--white-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.icon-modal-close {
+  position: absolute;
+}
+.backdrop .is-hidden {
+  opacity: 0;
+}
 
 .backdrop {
   position: fixed;
@@ -209,10 +251,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color:var(--modal-overlay);
+  background-color: var(--modal-overlay);
 
   opacity: 1;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   position: absolute;
@@ -222,13 +265,15 @@ body {
 
   width: 528px;
   height: 581px;
- 
+
   background: var(--white-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
   opacity: 1;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop .is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.1);
@@ -253,7 +298,7 @@ body {
   transform: translate(-49%, -45%);
 }
 .is-hidden {
-  opacity: 0; 
+  opacity: 0;
   pointer-events: none;
 }
 
@@ -453,17 +498,8 @@ body {
   align-items: center;
   margin-top: 50px;
 
-<<<<<<< HEAD
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-=======
-<<<<<<< HEAD
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-=======
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
->>>>>>> 7afb03fd2826a261aa27389d1fbc8127987a3335
->>>>>>> 94071e5310769dd453c9871d501e4a8e8111d56f
 }
 .clients-list .clients-item + .clients-item {
   margin-left: 30px;
@@ -539,24 +575,11 @@ body {
   height: 44px;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
+
   background-color: var(--footer-soc-bg);
   border-radius: 50%;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-=======
-<<<<<<< HEAD
-  background-color: var(--footer-soc-bg);
-  border-radius: 50%;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-=======
- background-color: var(--footer-soc-bg);
- border-radius: 50%;
-
- transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
->>>>>>> 7afb03fd2826a261aa27389d1fbc8127987a3335
->>>>>>> 94071e5310769dd453c9871d501e4a8e8111d56f
 }
 .web-list .web-item + .web-item {
   margin-left: 10px;
@@ -723,18 +746,14 @@ body {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.port-ex-parent {
-  position: relative;
-}
-.port-ex-overlay {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+
 .port-ex-parent {
   position: relative;
   overflow: hidden;
 }
 .port-ex-overlay {
   display: inline-block;
+
   background-color: var(--portfolio-ex-hover);
   font-weight: 400;
   font-size: 18px;
@@ -747,13 +766,10 @@ body {
   padding: 63px 24px;
 
   position: absolute;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   top: 100%;
   opacity: 0;
-}
-.portfolio-examples-item:hover .port-ex-overlay,
-.portfolio-examples-item:focus .port-ex-overlay {
-  transform: translateY(-100%);
 }
 
 .portfolio-examples-item:hover .port-ex-overlay,
